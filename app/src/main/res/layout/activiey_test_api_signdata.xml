@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_api_signdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="用户传签名任务ID签名"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_api_signdata_withpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="用户传pin与签名任务ID签名"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_api_signdata_backpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="用户签名完成后返回pin码"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_api_qr_signdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="用户扫码签名"
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/btn_api_offline_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="离线签名"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

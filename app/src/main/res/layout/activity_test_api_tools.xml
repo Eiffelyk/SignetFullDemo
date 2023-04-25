@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/btn_tool_enable_finger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="开启指纹"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_disable_finger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="关闭指纹"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_set_handwriting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="手写签名"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_picture_handwriting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="拍照签名"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_ocr_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取OCR信息"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_analyze_cert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="解析证书"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_cert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取证书"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_deviceId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取设备信息"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_signimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取用户签章图片"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_userlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取用户列表"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_enterseal_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取企业签章基本信息"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_enterseal_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取企业签章图片"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_enterseal_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取企业签章全信息"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_docuinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取文档信息"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_tool_get_livecheck_bestface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="获取活体检测最佳图片"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,7 @@
+{
+  "signetServUrl": "https://mssp-mhjm.isignet.cn:8443/MSSPServer/",
+  "appId": "APP_E833FF48A57A4C69B87DF1F48F8340DB",
+  "keyBoardResetShow": "false",
+  "useSelfSignCert": "false",
+  "qrCodeServUrl": "https://api-sit.isignet.cn:8082"
+}

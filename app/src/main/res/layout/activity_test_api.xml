@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_lifetime_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="证书生命周期管理模块"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_login_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="登录功能模块"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_signdata_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="数据签署模块"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_tools_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="辅助功能模块"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_tools_oldapi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="老接口调用"
+        android:textSize="18sp" />
+
+</LinearLayout>
