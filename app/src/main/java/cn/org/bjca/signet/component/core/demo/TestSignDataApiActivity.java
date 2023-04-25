@@ -29,8 +29,8 @@ public class TestSignDataApiActivity extends Activity implements View.OnClickLis
     private String msspID = "6db08148727abefb55bef4ab05b7f8f8f976094a7ef6f64a24645d236d5d169c";   //用户在云服务系统中的唯一标识
     //    private String msspID="ENA_2386699a-acce-4144-a5d9-16fafd167c55";   //用户在云服务系统中的唯一标识，企业用户一般以"ENA_"开头
 //    String signId="SD_778ede55-7c1e-49c3-846b-ae7cf1bd35ef";   //签名任务ID，由业务应用通过网关向云服务后台发起请求，云服务后台返回，具体参见集成方案。登录任务ID有效期三天
-    String signId="SD_f138120f-d7c8-4dfa-9068-6370067063eb";   //签名任务ID，由业务应用通过网关向云服务后台发起请求，云服务后台返回，具体参见集成方案。登录任务ID有效期三天
-    private String pin="111111";
+    String signId="SD_38a27a74-df80-45c8-8ce0-8a0f344a5311";   //签名任务ID，由业务应用通过网关向云服务后台发起请求，云服务后台返回，具体参见集成方案。登录任务ID有效期三天
+    private String pin="123123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

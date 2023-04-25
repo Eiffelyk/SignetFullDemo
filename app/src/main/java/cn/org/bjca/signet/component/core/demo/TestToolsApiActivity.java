@@ -50,10 +50,10 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
             btnAnalyzeCert, btnGetCert, btnGetDeviceId, btnGetSignImg, btnGetUserList,
             btnGetEnterSealBase, btnGetEnterSealImg, btnGetEnterSealTotal, btnGetDocuInfo, btnGetLiveCheckBestFace;
 
-    private Context mContext=TestToolsApiActivity.this;
-    private String msspID = "6db08148727abefb55bef4ab05b7f8f8f976094a7ef6f64a24645d236d5d169c";   //用户在云服务系统中的唯一标识
-    private String enterMsspID="ENA_2386699a-acce-4144-a5d9-16fafd167c55";   //用户在云服务系统中的唯一标识，企业用户一般以"ENA_"开头
-    private int READ_PHONE_STATE = 1;
+    private final Context mContext = TestToolsApiActivity.this;
+    private final String msspID = "6db08148727abefb55bef4ab05b7f8f8f976094a7ef6f64a24645d236d5d169c";   //用户在云服务系统中的唯一标识
+    private final String enterMsspID = "ENA_2386699a-acce-4144-a5d9-16fafd167c55";   //用户在云服务系统中的唯一标识，企业用户一般以"ENA_"开头
+    private final int READ_PHONE_STATE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +120,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
                             @Override
                             public void onSetFingerResult(SignetBaseResult setFingerResult) {
-                                DemoUtils.toastInfo(mContext,setFingerResult);
+                                DemoUtils.toastInfo(mContext, setFingerResult);
 
                             }
                         });
@@ -135,7 +135,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
                             @Override
                             public void onSetFingerResult(SignetBaseResult setFingerResult) {
-                                DemoUtils.toastInfo(mContext,setFingerResult);
+                                DemoUtils.toastInfo(mContext, setFingerResult);
 
                             }
                         });
@@ -149,8 +149,8 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
                             @Override
                             public void onSetSignImageResult(SignImageResult setSignImageResult) {
-                                DemoUtils.toastInfo(mContext,setSignImageResult);
-
+                                DemoUtils.toastInfo(mContext, setSignImageResult);
+                                DemoUtils.Log("signImageSrc=" + setSignImageResult.getSignImageSrc());
                             }
 
                         });
@@ -158,11 +158,11 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
             //用户拍照设置个人签章（该接口不支持企业用户调用）
             case R.id.btn_tool_picture_handwriting:
-               //接口调用
+                //接口调用
                 SignetCoreApi.useCoreFunc(new SetSignImageCallBack(mContext, msspID, SetSignImgType.PICTURE_HANDWRITING) {
                     @Override
                     public void onSetSignImageResult(SignImageResult setSignImageResult) {
-                        DemoUtils.toastInfo(mContext,setSignImageResult);
+                        DemoUtils.toastInfo(mContext, setSignImageResult);
 
                     }
                 });
@@ -176,7 +176,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
                     @Override
                     public void onOcrResult(Map<String, String> ocrResultMap) {
-                        DemoUtils.toastInfo(mContext,ocrResultMap.get("ERR_CODE")+" : "+ ocrResultMap.get("ERR_MSG"));
+                        DemoUtils.toastInfo(mContext, ocrResultMap.get("ERR_CODE") + " : " + ocrResultMap.get("ERR_MSG"));
                     }
                 });
                 break;
@@ -198,6 +198,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
                 //接口调用获取结果
                 GetCertResult result1 = SignetToolApi.getUserCert(mContext, msspID, CertType.ALL_CERT);
                 DemoUtils.toastInfo(mContext, result1.getUserCertMap().toString());
+                DemoUtils.Log("cert=" + result1.getUserCertMap().toString());
                 break;
 
             case R.id.btn_tool_get_deviceId:
@@ -223,7 +224,8 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
                 //调用接口获取结果
                 SignImageResult result3 = SignetToolApi.getSignImage(mContext, msspID);
-                DemoUtils.toastInfo(mContext,  result3.getSignImageSrc());
+                DemoUtils.toastInfo(mContext, result3.getSignImageSrc());
+                DemoUtils.Log("signImageSrc=" + result3.getSignImageSrc());
                 break;
 
             //获取设备本地用户列表
@@ -231,7 +233,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
 
                 //调用接口获取结果
                 GetUserListResult result4 = SignetToolApi.getUserList(mContext);
-                DemoUtils.toastInfo(mContext,   result4.getUserListMap().toString());
+                DemoUtils.toastInfo(mContext, result4.getUserListMap().toString());
                 break;
             //获取企业签章基本信息接口，该接口仅支持企业用户调用
             case R.id.btn_tool_get_enterseal_base:
@@ -240,7 +242,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
                 SignetCoreApi.useCoreFunc(new EnterpriseSealBaseCallBack(mContext, enterMsspID) {
                     @Override
                     public void onGetEnterpriseSealBase(EnterpriseSealBaseInfo baseInfo) {
-                        DemoUtils.toastInfo(mContext,  baseInfo.getErrMsg());
+                        DemoUtils.toastInfo(mContext, baseInfo.getErrMsg());
                     }
                 });
                 break;
@@ -248,12 +250,12 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
             //指定企业签章ID，获取签章图片Base64编码接口，该接口仅支持企业用户调用,详见接口文档
             case R.id.btn_tool_get_enterseal_img:
 
-                String imageID="bde557c131644ac0a7b3704d51cdc87d";
+                String imageID = "bde557c131644ac0a7b3704d51cdc87d";
                 //接口调用获取结果
                 SignetCoreApi.useCoreFunc(new EnterpriseSealImgCallBack(mContext, enterMsspID, imageID) {
                     @Override
                     public void onGetEnterpriseSealImgResult(EnterpriseSealImg result) {
-                        DemoUtils.toastInfo(mContext,  result.getErrMsg());
+                        DemoUtils.toastInfo(mContext, result.getErrMsg());
                     }
                 });
                 break;
@@ -278,7 +280,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
                 SignetCoreApi.useCoreFunc(new DocuInfoCallBack(mContext, enterMsspID, docuId) {
                     @Override
                     public void onGetDocuInfo(DocuInfoResult result) {
-                        DemoUtils.toastInfo(mContext,result.getErrMsg());
+                        DemoUtils.toastInfo(mContext, result.getErrMsg());
                     }
                 });
 
@@ -291,7 +293,7 @@ public class TestToolsApiActivity extends Activity implements View.OnClickListen
                 SignetCoreApi.useCoreFunc(new LiveCheckCallBack(mContext, 3) {
                     @Override
                     public void onLiveCheckResult(LiveCheckResult liveCheckResult) {
-                        DemoUtils.toastInfo(mContext,liveCheckResult.getErrMsg());
+                        DemoUtils.toastInfo(mContext, liveCheckResult.getErrMsg());
                     }
                 });
                 break;

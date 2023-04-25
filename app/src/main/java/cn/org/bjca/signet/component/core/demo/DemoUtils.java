@@ -1,6 +1,7 @@
 package cn.org.bjca.signet.component.core.demo;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import cn.org.bjca.signet.component.core.bean.results.SignetBaseResult;
@@ -19,5 +20,8 @@ public class DemoUtils {
 
     public static void toastInfo(Context mContext,String msg){
         Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
+    }
+    public static void Log(String msg){
+        Log.e("SignetFullDemo",msg);
     }
 }

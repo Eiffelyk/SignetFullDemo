@@ -43,5 +43,18 @@
         android:layout_margin="20dp"
         android:text="老接口调用"
         android:textSize="18sp" />
-
+    <Button
+        android:id="@+id/btn_tools_start_yun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="开启云签名（不带参数）"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/btn_tools_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="开启云签名（带用户信息）"
+        android:textSize="18sp" />
 </LinearLayout>
