@@ -8,7 +8,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.eiffelyk.signetdemo"
+        applicationId "com.eiffelyk.signetfulldemo"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -22,11 +22,25 @@ android {
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        release {
+            storeFile file(STOREFILE)
+            storePassword PASSWORD
+            keyPassword PASSWORD
+            keyAlias KEYALIAS
+        }
+    }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true  // 移除无用的resource文件
+            zipAlignEnabled true // Zipalign优化
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
